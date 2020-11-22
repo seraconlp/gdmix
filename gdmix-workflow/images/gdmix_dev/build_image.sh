@@ -1,11 +1,10 @@
 #!/bin/sh
 
-rsync -arvp ../../examples/movielens-100k/*single-node*.config .
 rsync -arvp ../../../scripts/download_process_movieLens_data.py .
 
 REGISTROY=linkedin
-IMAGE_NAME=gdmix
-VERSION_TAG=0.3
+IMAGE_NAME=gdmix-dev
+VERSION_TAG=0.1
 VERSIONED_IMAGE_NAME=${REGISTROY}/${IMAGE_NAME}:${VERSION_TAG}
 
 echo "Building image ${VERSIONED_IMAGE_NAME}"
